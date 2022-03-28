@@ -1,2 +1,4 @@
-# FED-Groupwork-G5
-Groupwork G5
+# Car Fuel Expenses Application (Group 5)
+
+## Instructions
+1. Install Node.js
