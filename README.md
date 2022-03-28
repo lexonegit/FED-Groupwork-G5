@@ -1,7 +1,11 @@
 # Car Fuel Expenses Application (Group 5)
 
-## Setup guide
-1. install Node.js
-2. git clone
-3. npm install(?)
-4. create own git branch (git checkout -b [nimi])
+## Install instructions
+1. Install Node.js and Git Bash
+2. Open Git Bash in some directory (right-click -> "Git Bash Here")
+3. Clone the repository with `git clone https://github.com/lexonegit/FED-Groupwork-G5.git`
+4. Navigate to the project directory with `cd car-fuel-calculator`
+5. Install project dependencies with `npm install`
+6. Run the app and test if it works in your browser `npm start`
+7. Create your own Git branch `git checkout -b [YOUR_BRANCH_NAME]`
+8. Push your branch to GitHub `git push origin [YOUR_BRANCH_NAME]`
