@@ -1,10 +1,9 @@
 import React from 'react'
 
-export const Header = () =>
-{
+export const Header = () => {
   return (
     <h2>
-      Expense Tracker
+      Refuel Expense Tracker
     </h2>
   )
 }

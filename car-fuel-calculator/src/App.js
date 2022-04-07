@@ -1,11 +1,11 @@
-// import './App.css';
-import './LeeviCss.css';
-import { MainLayout } from './components/MainLayout';
+import React from 'react';
 import { Header } from './components/Header';
-import { Balance } from './components/Balance';
-import { IncomeExpenses } from './components/IncomeExpenses';
-import { TransactionList } from './components/TransactionList';
-import { AddTransaction } from './components/AddTransaction';
+import { TotalExpenses } from './components/TotalExpenses';
+import { CarExpenses } from './components/CarExpenses';
+import { RefuelHistory } from './components/RefuelHistory';
+import { AddCar } from './components/AddCar';
+
+import './App.css';
 
 import { GlobalProvider } from './context/GlobalState';
 
@@ -25,7 +25,13 @@ function App()
 
   // Temporary (make a component for all of this?)
   return (
-    <MainLayout />
+    <div>
+      <Header />
+      <TotalExpenses />
+      <CarExpenses />
+      <RefuelHistory />
+      <AddCar />
+    </div>
   );
 }
 
