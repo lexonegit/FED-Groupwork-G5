@@ -1,6 +1,10 @@
 import React from 'react'
 
-import { TestComponent } from './TestComponent';
+import { Header } from './Header';
+import { TotalExpenses } from './TotalExpenses';
+import { CarExpenses } from './CarExpenses';
+import { RefuelHistory } from './RefuelHistory';
+import { AddCar } from './AddCar';
 
 export const MainLayout = () =>
 {
@@ -19,27 +23,17 @@ export const MainLayout = () =>
 
         <div className="expenses-container">
           <div className="expenses-totals-div">
-            <p>TOTAL REFUELING EXPENSES</p>
-            <p>Total sum</p>
-            <p>Total consumption</p>
-            <p>Total distance</p>
-            <p>Avg expenses</p>
-            <p>Avg consumption</p>
+            <TotalExpenses />
           </div>
 
           <div className="expenses-car-div">
-            <p>CAR REFUELING EXPENSES</p>
-            <p>Total sum</p>
-            <p>Total consumption</p>
-            <p>Total distance</p>
-            <p>Avg expenses</p>
-            <p>Avg consumption</p>
+            <CarExpenses />
           </div>
         </div>
 
         <div className="content-div">
           <div className="new-car-div">
-            <p>new car div</p>
+            <AddCar />
           </div>
           <div className="new-expense-div">
             <p>new expense div</p>
@@ -50,7 +44,7 @@ export const MainLayout = () =>
       <div className="right-div">
         <div className="history-div">
           <p>Refueling history</p>
-          <TestComponent />
+          <RefuelHistory />
         </div>
       </div>
     </div>
