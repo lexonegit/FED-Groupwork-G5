@@ -1,0 +1,85 @@
+body {
+  background-color: #f7f7f7;
+}
+
+p {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Combined styles */
+.expenses-totals-div, .expenses-car-div, .content-div, .history-div {
+  padding: 0.5em;
+  margin: 0.25em;
+
+  border: 1px dashed;
+}
+
+.main-div {
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+
+  /* These 2 lines are responsible for responsive centering */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.left-div {
+  float: left;
+
+  width: 60%;
+  height: 100%;
+
+  background-color: #ffd9d9;
+}
+
+.right-div {
+  float: right;
+
+  width: 40%;
+  height: 100%;
+
+  background-color: #e4ffd9;
+}
+
+.expenses-container {
+  display: flex;
+
+}
+
+.selection-div {
+  margin: 0.25em;
+  padding: 0.5em 0;
+}
+
+.expenses-totals-div {
+  width: 50%;
+
+  background-color: #eeeeee;
+}
+
+.expenses-car-div {
+  width: 50%;
+
+  background-color: #eeeeee;
+}
+
+.content-div {
+  height: 400px;
+
+  background-color: #ffffff;
+}
+
+.history-div {
+  background-color: #eeeeee;
+}
+
+.history-element-div {
+  background-color: #ffffff;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  border: 1px dashed black;
+  height: 100px;
+}
+
