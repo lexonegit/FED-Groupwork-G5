@@ -3,7 +3,8 @@ import { Header } from './components/Header';
 import { TotalExpenses } from './components/TotalExpenses';
 import { CarExpenses } from './components/CarExpenses';
 import { RefuelHistory } from './components/RefuelHistory';
-import { AddCar } from './components/AddCar';
+import { AddRefuel } from './components/AddRefuel';
+import { SelectCar } from './components/SelectCar';
 
 import './App.css';
 
@@ -14,7 +15,8 @@ function App() {
       <TotalExpenses />
       <CarExpenses />
       <RefuelHistory />
-      <AddCar />
+      <AddRefuel />
+      <SelectCar />
     </div>
   );
 }
