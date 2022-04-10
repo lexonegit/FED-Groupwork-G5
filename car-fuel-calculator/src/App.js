@@ -7,9 +7,9 @@ import { GlobalProvider } from './context/GlobalState';
 function App()
 {
   return (
-    <div>
+    <GlobalProvider>
       <MainLayout/>
-    </div>
+    </GlobalProvider>
   );
 }
 
