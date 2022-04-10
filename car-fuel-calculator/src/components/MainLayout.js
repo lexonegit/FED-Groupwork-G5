@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react';
 
 import { Header } from './Header';
 import { TotalExpenses } from './TotalExpenses';
@@ -6,17 +6,21 @@ import { CarExpenses } from './CarExpenses';
 import { RefuelHistory } from './RefuelHistory';
 import { AddCar } from './AddCar';
 
+import { GlobalContext } from '../context/GlobalState';
+
 export const MainLayout = () =>
 {
+  const { cars } = useContext(GlobalContext)
+
   return (
     <div className="main-div">
       <div className="left-div">
 
         <div className="selection-div">
           <select name="cars" id="cars">
-            <option>Auto 1</option>
-            <option>Auto 2</option>
-            <option>Auto 3</option>
+            {cars.map( car => (
+              <option key={"car" + car.id}>{car.carName}</option>
+            ))}
           </select>
           <button>New car</button>
         </div>

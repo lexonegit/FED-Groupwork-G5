@@ -9,6 +9,11 @@ const initialState = {
     { id: 3, carName: 'Car 1', amount: 120, cost: 60, },
     { id: 4, carName: 'Car 2', amount: 30, cost: 15, },
   ],
+  cars: [
+    { id: 1, carName: 'Auto 1' },
+    { id: 2, carName: 'Auto 2' },
+    { id: 3, carName: 'Auto 3' },
+  ]
 }
 
 // Create context
