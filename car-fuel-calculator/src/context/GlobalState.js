@@ -41,10 +41,19 @@ export const GlobalProvider = ({ children }) =>
     });
   }
 
+  function addCar(car) {
+    dispatch({
+      type: 'ADD_CAR',
+      payload: car
+    });
+  }
+
   return (<GlobalContext.Provider value={{
     expenses: state.expenses,
+    cars: state.cars,
     deleteExpense,
-    addExpense
+    addExpense,
+    addCar,
   }}>
     {children}
   </GlobalContext.Provider>)

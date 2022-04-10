@@ -10,11 +10,37 @@ import { GlobalContext } from '../context/GlobalState';
 
 export const MainLayout = () =>
 {
-  const { cars } = useContext(GlobalContext);
+  const { cars, addCar, deleteExpense } = useContext(GlobalContext);
   const [ selectedCar, setSelectedCar ] = useState(cars[0].carName);
 
   const handleCarSelection = e => {
     setSelectedCar(e.target.value);
+  };
+
+  // just something I wanted to play around with for a bit,
+  // not anything necessary for the final product
+  // returns false if name is invalid
+  const validateName = carName => {
+    const name = carName.trim();
+    if (!name) return false;
+
+    return true;
+  };
+
+  const handleNewCar = e => {
+    const carName = prompt("Please enter car's name:");
+    // if function returns false, cancel and inform the user
+    if (!validateName( carName )) {
+      alert("Bad name");
+      return;
+    }
+
+    addCar({
+      id: Math.floor(Math.random() * 100000000),
+      carName,
+    });
+
+    setSelectedCar(carName);
   };
 
   return (
@@ -30,7 +56,7 @@ export const MainLayout = () =>
               <option key={"car" + car.id} value={car.carName}>{car.carName}</option>
             ))}
           </select>
-          <button>New car</button>
+          <button onClick={handleNewCar}>New car</button>
         </div>
 
         <div className="expenses-container">
@@ -45,7 +71,7 @@ export const MainLayout = () =>
 
         <div className="content-div">
           <div className="new-car-div">
-            <AddCar />
+            {/**<AddCar />**/}
           </div>
           <div className="new-expense-div">
             <p>new expense div</p>
