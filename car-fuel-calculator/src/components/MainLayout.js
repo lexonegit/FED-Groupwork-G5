@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 
 import { Header } from './Header';
 import { TotalExpenses } from './TotalExpenses';
@@ -10,16 +10,24 @@ import { GlobalContext } from '../context/GlobalState';
 
 export const MainLayout = () =>
 {
-  const { cars } = useContext(GlobalContext)
+  const { cars } = useContext(GlobalContext);
+  const [ selectedCar, setSelectedCar ] = useState(cars[0].carName);
+
+  const handleCarSelection = e => {
+    setSelectedCar(e.target.value);
+  };
 
   return (
     <div className="main-div">
       <div className="left-div">
 
         <div className="selection-div">
-          <select name="cars" id="cars">
+          <select name="cars" id="cars"
+            value={selectedCar}
+            onChange={handleCarSelection}
+            >
             {cars.map( car => (
-              <option key={"car" + car.id}>{car.carName}</option>
+              <option key={"car" + car.id} value={car.carName}>{car.carName}</option>
             ))}
           </select>
           <button>New car</button>
@@ -31,7 +39,7 @@ export const MainLayout = () =>
           </div>
 
           <div className="expenses-car-div">
-            <CarExpenses />
+            <CarExpenses car={selectedCar}/>
           </div>
         </div>
 

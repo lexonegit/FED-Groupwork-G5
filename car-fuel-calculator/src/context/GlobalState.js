@@ -4,10 +4,10 @@ import AppReducer from './AppReducer';
 // Initial state
 const initialState = {
   expenses: [
-    { id: 1, carName: 'Car 1', amount: 60, cost: 30, distance: 0, },
-    { id: 2, carName: 'Car 2', amount: 100, cost: 50, distance: 0, },
-    { id: 3, carName: 'Car 1', amount: 120, cost: 60, distance: 0, },
-    { id: 4, carName: 'Car 2', amount: 30, cost: 15, distance: 0, },
+    { id: 1, carName: 'Auto 1', amount: 60, cost: 30, distance: 0, },
+    { id: 2, carName: 'Auto 2', amount: 100, cost: 50, distance: 0, },
+    { id: 3, carName: 'Auto 1', amount: 120, cost: 60, distance: 0, },
+    { id: 4, carName: 'Auto 2', amount: 30, cost: 15, distance: 0, },
   ],
   cars: [
     { id: 1, carName: 'Auto 1' },
