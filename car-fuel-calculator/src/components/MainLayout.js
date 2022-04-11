@@ -19,16 +19,15 @@ export const MainLayout = () =>
 
   // just something I wanted to play around with for a bit,
   // not anything necessary for the final product
-  // returns false if name is invalid
+  // returns false if name is invalid (empty)
   const validateName = carName => {
-    const name = carName.trim();
-    if (!name) return false;
+    if (!carName) return false;
 
     return true;
   };
 
   const handleNewCar = e => {
-    const carName = prompt("Please enter car's name:");
+    const carName = prompt("Please enter car's name:").trim();
     // if function returns false, cancel and inform the user
     if (!validateName( carName )) {
       alert("Bad name");
