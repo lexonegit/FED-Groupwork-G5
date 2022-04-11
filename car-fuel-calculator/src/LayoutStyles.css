@@ -77,9 +77,12 @@ p {
 
 .history-element-div {
   background-color: #ffffff;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   padding: 0.5em;
   border: 1px dashed black;
-  height: 100px;
+  height: 30px;
+
+  display: flex;
+  justify-content: space-between;
 }
 

@@ -7,9 +7,12 @@ export const RefuelHistory = () =>
   const { expenses } = useContext(GlobalContext);
 
   return (
-    <div className="history-element-div">
-      {expenses.map( expense => (
-        <p key={expense.id}>{expense.carName} -- {expense.cost}€ -- {expense.amount}L</p>
+    <div>
+      {expenses.map(expense => (
+        <div className="history-element-div">
+          <p key={expense.id}><b>{expense.carName}</b></p>
+          <p key={expense.id}>{expense.amount}L, {expense.cost}€</p>
+        </div>
       ))}
     </div>
   )
