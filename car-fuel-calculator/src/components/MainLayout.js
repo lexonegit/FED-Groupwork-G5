@@ -4,7 +4,7 @@ import { Header } from './Header';
 import { TotalExpenses } from './TotalExpenses';
 import { CarExpenses } from './CarExpenses';
 import { RefuelHistory } from './RefuelHistory';
-import { AddCar } from './AddCar';
+import { AddRefuel } from './AddRefuel';
 
 import { GlobalContext } from '../context/GlobalState';
 
@@ -71,7 +71,7 @@ export const MainLayout = () =>
 
         <div className="content-div">
           <div className="new-car-div">
-            {/**<AddCar />**/}
+            {/**<AddRefuel />**/}
           </div>
           <div className="new-expense-div">
             <p>new expense div</p>
