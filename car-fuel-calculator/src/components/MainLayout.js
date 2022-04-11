@@ -71,10 +71,10 @@ export const MainLayout = () =>
 
         <div className="content-div">
           <div className="new-car-div">
-            {/**<AddRefuel />**/}
+            <p>new car div</p>
           </div>
           <div className="new-expense-div">
-            <p>new expense div</p>
+            <AddRefuel />
           </div>
         </div>
       </div>
