@@ -42,7 +42,7 @@ export const MainLayout = () =>
               <option key={"car" + car.id} value={car.carName}>{car.carName}</option>
             ))}
           </select>
-          <button onClick={(e) => handleView(e, 0)}>New car</button>
+          <button onClick={(e) => handleView(e, 0)}>Add a new car</button>
         </div>
 
         <div className="expenses-container">
