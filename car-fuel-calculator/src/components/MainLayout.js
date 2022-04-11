@@ -73,7 +73,7 @@ export const MainLayout = () =>
             <p>new car div</p>
           </div>
           <div className="new-expense-div">
-            <AddRefuel />
+            <AddRefuel selectedCar={selectedCar}/>
           </div>
         </div>
       </div>

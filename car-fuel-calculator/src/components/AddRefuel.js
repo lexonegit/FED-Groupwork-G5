@@ -2,10 +2,9 @@ import React, { useState, useContext } from 'react';
 
 import { GlobalContext } from '../context/GlobalState';
 
-export const AddRefuel = () => {
+export const AddRefuel = ({ selectedCar }) => {
   const { addExpense } = useContext(GlobalContext);
 
-  const [carName, setCarName] = useState('');
   const [amount, setAmount] = useState(0);
   const [price, setPrice] = useState(0);
 
@@ -14,7 +13,7 @@ export const AddRefuel = () => {
 
     const newExpense = {
       id: Math.floor(Math.random() * 100000000),
-      carName,
+      carName: selectedCar,
       amount: +amount,
       cost: +price,
       distance: 0,
@@ -27,11 +26,7 @@ export const AddRefuel = () => {
     <div>
       <h3>Add refuel information</h3>
       <form onSubmit={onSubmit}>
-        <div className="form-control">
-          <label htmlFor="text">Car</label>
-          <input type="text" value={carName} onChange={(e) => setCarName(e.target.value)}
-          placeholder="Enter car name..." />
-        </div>
+        <p>Car Selected: <b>{selectedCar}</b></p>
         <div className="form-control">
           <label htmlFor="amount">
               Amount of liters <br />
