@@ -8,7 +8,10 @@ p {
 }
 
 /* Combined styles */
-.expenses-totals-div, .expenses-car-div, .content-div, .history-div {
+.expenses-totals-div,
+.expenses-car-div,
+.content-div,
+.history-div {
   padding: 0.5em;
   margin: 0.25em;
 
@@ -45,14 +48,27 @@ p {
 
 .expenses-container {
   display: flex;
-
 }
 
+/* Selection div things */
 .selection-div {
+  display: flex;
+
+  height: 32px;
   margin: 0.25em;
   padding: 0.5em 0;
 }
 
+.selection-div select {
+  width: 80%;
+}
+
+.selection-div button {
+  width: 20%;
+  margin-left: 0.5em;
+}
+
+/* Other divs */
 .expenses-totals-div {
   width: 50%;
 
@@ -76,10 +92,12 @@ p {
 }
 
 .history-element-div {
+  display: flex;
+  justify-content: space-between;
+
   background-color: #ffffff;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   padding: 0.5em;
   border: 1px dashed black;
-  height: 100px;
+  height: 30px;
 }
-

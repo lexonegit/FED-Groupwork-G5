@@ -5,57 +5,44 @@ import { TotalExpenses } from './TotalExpenses';
 import { CarExpenses } from './CarExpenses';
 import { RefuelHistory } from './RefuelHistory';
 import { AddRefuel } from './AddRefuel';
+import { AddCar } from './AddCar';
 
 import { GlobalContext } from '../context/GlobalState';
 
 export const MainLayout = () =>
 {
-  const { cars, addCar, deleteExpense } = useContext(GlobalContext);
-  const [ selectedCar, setSelectedCar ] = useState(cars[0].carName);
+  const { cars, deleteExpense } = useContext(GlobalContext);
+  const [selectedCar, setSelectedCar] = useState(cars[0].carName);
 
-  const handleCarSelection = e => {
+  const [view, setView] = useState(1);
+
+  const handleCarSelection = e =>
+  {
     setSelectedCar(e.target.value);
+
+    handleView(e, 1);
   };
 
-  // just something I wanted to play around with for a bit,
-  // not anything necessary for the final product
-  // returns false if name is invalid (empty)
-  const validateName = carName => {
-    if (!carName) return false;
-
-    return true;
-  };
-
-  const handleNewCar = e => {
-    const carName = prompt("Please enter car's name:").trim();
-    // if function returns false, cancel and inform the user
-    if (!validateName( carName )) {
-      alert("Bad name");
-      return;
-    }
-
-    addCar({
-      id: Math.floor(Math.random() * 100000000),
-      carName,
-    });
-
-    setSelectedCar(carName);
-  };
+  // id 0 = Add car view
+  // id 1 = Add refuel view
+  const handleView = (e, id) =>
+  {
+    setView(id);
+  }
 
   return (
     <div className="main-div">
       <div className="left-div">
-
         <div className="selection-div">
           <select name="cars" id="cars"
             value={selectedCar}
             onChange={handleCarSelection}
-            >
-            {cars.map( car => (
+          >
+            {cars.map(car => (
               <option key={"car" + car.id} value={car.carName}>{car.carName}</option>
             ))}
           </select>
-          <button onClick={handleNewCar}>New car</button>
+          <button onClick={(e) => handleView(e, 0)}>Add a new car</button>
         </div>
 
         <div className="expenses-container">
@@ -64,17 +51,12 @@ export const MainLayout = () =>
           </div>
 
           <div className="expenses-car-div">
-            <CarExpenses car={selectedCar}/>
+            <CarExpenses car={selectedCar} />
           </div>
         </div>
 
         <div className="content-div">
-          <div className="new-car-div">
-            <p>new car div</p>
-          </div>
-          <div className="new-expense-div">
-            <AddRefuel selectedCar={selectedCar}/>
-          </div>
+          {view === 1 ? <AddRefuel selectedCar={selectedCar} /> : <AddCar />}
         </div>
       </div>
 
