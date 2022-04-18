@@ -20,7 +20,6 @@ p {
 
 .main-div {
   display: flex;
-  align-items: top;
   justify-content: space-between;
 
   /* These 2 lines are responsible for responsive centering */
@@ -89,6 +88,8 @@ p {
 
 .history-div {
   background-color: #eeeeee;
+  max-height: 510px;
+  overflow: auto;
 }
 
 .history-element-div {
