@@ -9,7 +9,7 @@ export const RefuelHistory = () =>
   return (
     <div className="history-element-div">
       {expenses.map( expense => (
-        <p key={expense.id}>{expense.carName} -- {expense.cost}€ -- {expense.amount}L</p>
+        <p key={expense.id}>{expense.carName} -- {expense.cost}€ -- {expense.amount}L -- {expense.distance}KM</p>
       ))}
     </div>
   )
