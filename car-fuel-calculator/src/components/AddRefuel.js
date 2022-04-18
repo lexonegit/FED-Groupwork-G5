@@ -49,7 +49,7 @@ export const AddRefuel = ({ selectedCar }) => {
             <input type="number" value={distance} onChange={(e) => setDistance(e.target.value)}
             placeholder="Enter distance..." />
         </div>
-        <button className="btn">Add car</button>
+        <button className="btn">Add Refuel Expense</button>
       </form>
     </div>
   )
