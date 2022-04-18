@@ -4,7 +4,7 @@ import { GlobalContext } from '../context/GlobalState';
 
 export const AddCar = ({ handleCarSelection }) =>
 {
-  const { cars, addCar } = useContext(GlobalContext);
+  const { addCar } = useContext(GlobalContext);
 
   const [carName, setName] = useState("");
 

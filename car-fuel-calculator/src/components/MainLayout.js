@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 
-import { Header } from './Header';
+// import { Header } from './Header';
 import { TotalExpenses } from './TotalExpenses';
 import { CarExpenses } from './CarExpenses';
 import { RefuelHistory } from './RefuelHistory';
@@ -11,7 +11,7 @@ import { GlobalContext } from '../context/GlobalState';
 
 export const MainLayout = () =>
 {
-  const { cars, deleteExpense } = useContext(GlobalContext);
+  const { cars } = useContext(GlobalContext);
   const [selectedCar, setSelectedCar] = useState(cars[0]?.carName);
 
   const [view, setView] = useState( selectedCar ? 1 : 0);
