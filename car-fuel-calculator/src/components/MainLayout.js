@@ -12,9 +12,9 @@ import { GlobalContext } from '../context/GlobalState';
 export const MainLayout = () =>
 {
   const { cars, deleteExpense } = useContext(GlobalContext);
-  const [selectedCar, setSelectedCar] = useState(cars[0].carName);
+  const [selectedCar, setSelectedCar] = useState(cars[0]?.carName);
 
-  const [view, setView] = useState(1);
+  const [view, setView] = useState( selectedCar ? 1 : 0);
 
   const handleCarSelection = e =>
   {
@@ -56,7 +56,7 @@ export const MainLayout = () =>
         </div>
 
         <div className="content-div">
-          {view === 1 ? <AddRefuel selectedCar={selectedCar} /> : <AddCar />}
+          {view === 1 ? <AddRefuel selectedCar={selectedCar} /> : <AddCar handleCarSelection={handleCarSelection}/>}
         </div>
       </div>
 

@@ -2,12 +2,11 @@ import React, { useState, useContext } from 'react';
 
 import { GlobalContext } from '../context/GlobalState';
 
-export const AddCar = () =>
+export const AddCar = ({ handleCarSelection }) =>
 {
   const { cars, addCar } = useContext(GlobalContext);
 
   const [carName, setName] = useState("");
-  const [setSelectedCar] = useState(cars[0].carName);
 
   // just something I wanted to play around with for a bit,
   // not anything necessary for the final product
@@ -35,7 +34,8 @@ export const AddCar = () =>
       carName,
     });
 
-    setSelectedCar(carName);
+    // create fake event object to pass the car name to the handler
+    handleCarSelection( {target: {value: carName}});
   };
 
   return (
