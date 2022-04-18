@@ -16,16 +16,16 @@ export const MainLayout = () =>
 
   const [view, setView] = useState( selectedCar ? 1 : 0);
 
-  const handleCarSelection = e =>
+  const handleCarSelection = carName =>
   {
-    setSelectedCar(e.target.value);
+    setSelectedCar(carName);
 
-    handleView(e, 1);
+    handleView(1);
   };
 
   // id 0 = Add car view
   // id 1 = Add refuel view
-  const handleView = (e, id) =>
+  const handleView = id =>
   {
     setView(id);
   }
@@ -36,13 +36,13 @@ export const MainLayout = () =>
         <div className="selection-div">
           <select name="cars" id="cars"
             value={selectedCar}
-            onChange={handleCarSelection}
+            onChange={e => handleCarSelection(e.target.value) }
           >
             {cars.map(car => (
               <option key={"car" + car.id} value={car.carName}>{car.carName}</option>
             ))}
           </select>
-          <button onClick={(e) => handleView(e, 0)}>Add a new car</button>
+          <button onClick={(e) => handleView(0)}>Add a new car</button>
         </div>
 
         <div className="expenses-container">

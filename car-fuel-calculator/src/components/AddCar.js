@@ -34,8 +34,7 @@ export const AddCar = ({ handleCarSelection }) =>
       carName,
     });
 
-    // create fake event object to pass the car name to the handler
-    handleCarSelection( {target: {value: carName}});
+    handleCarSelection( carName );
   };
 
   return (
