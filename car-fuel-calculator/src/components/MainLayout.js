@@ -14,7 +14,21 @@ export const MainLayout = () =>
   const { cars } = useContext(GlobalContext);
   const [selectedCar, setSelectedCar] = useState(cars[0]?.carName);
 
-  const [view, setView] = useState( selectedCar ? 1 : 0);
+  const [view, setView] = useState(selectedCar ? 1 : 0);
+
+  const checkIfViewShouldChange = (e) =>
+  {
+    // HACK FIX!
+    // Explanation: If the view is currently on the "add a new car" view
+    // and the user tries to select the same (or only) car again, the view wont update
+    // because it doesn't "change" (onChange event doesnt fire)
+    // This function solves that issue.
+
+    if (e.detail === 0)
+    {
+      setView(1);
+    }
+  }
 
   const handleCarSelection = carName =>
   {
@@ -36,7 +50,8 @@ export const MainLayout = () =>
         <div className="selection-div">
           <select name="cars" id="cars"
             value={selectedCar}
-            onChange={e => handleCarSelection(e.target.value) }
+            onChange={e => handleCarSelection(e.target.value)}
+            onClick={e => checkIfViewShouldChange(e)}
           >
             {cars.map(car => (
               <option key={"car" + car.id} value={car.carName}>{car.carName}</option>
@@ -56,7 +71,7 @@ export const MainLayout = () =>
         </div>
 
         <div className="content-div">
-          {view === 1 ? <AddRefuel selectedCar={selectedCar} /> : <AddCar handleCarSelection={handleCarSelection}/>}
+          {view === 1 ? <AddRefuel selectedCar={selectedCar} /> : <AddCar handleCarSelection={handleCarSelection} />}
         </div>
       </div>
 
