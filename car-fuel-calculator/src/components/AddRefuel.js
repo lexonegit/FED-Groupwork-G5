@@ -7,6 +7,7 @@ export const AddRefuel = ({ selectedCar }) => {
 
   const [amount, setAmount] = useState(0);
   const [price, setPrice] = useState(0);
+  const [distance, setDistance] = useState(0);
 
   const onSubmit = e => {
     e.preventDefault();
@@ -16,7 +17,7 @@ export const AddRefuel = ({ selectedCar }) => {
       carName: selectedCar,
       amount: +amount,
       cost: +price,
-      distance: 0,
+      distance: +distance,
     };
 
     addExpense(newExpense);
@@ -40,6 +41,13 @@ export const AddRefuel = ({ selectedCar }) => {
             </label>
             <input type="number" value={price} onChange={(e) => setPrice(e.target.value)}
             placeholder="Enter cost..." />
+        </div>
+        <div className="form-control">
+            <label htmlFor="distance">
+                Distance traveled <br />
+            </label>
+            <input type="number" value={distance} onChange={(e) => setDistance(e.target.value)}
+            placeholder="Enter distance..." />
         </div>
         <button className="btn">Add car</button>
       </form>
