@@ -11,8 +11,8 @@ export const CarExpenses = ({ car }) => {
   const totalDistance = carExpenses.reduce((acc, expense) => acc + expense.distance, 0);
   const totalConsumption = carExpenses.reduce((acc, expense) => acc + expense.amount, 0);
 
-  const avgExpensesPer100 = totalSum / totalDistance * 100;
-  const avgConsumptionPer100 = totalConsumption / totalDistance * 100;
+  const avgExpensesPer100 = (totalSum / totalDistance * 100).toFixed(2);
+  const avgConsumptionPer100 = (totalConsumption / totalDistance * 100).toFixed(2);
 
   return (
     <div>
