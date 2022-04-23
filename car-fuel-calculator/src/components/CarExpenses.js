@@ -2,10 +2,11 @@ import React, { useContext } from 'react';
 
 import { GlobalContext } from '../context/GlobalState';
 
-export const CarExpenses = ({ car }) => {
+export const CarExpenses = ({ car }) =>
+{
   const { expenses } = useContext(GlobalContext);
 
-  const carExpenses = expenses.filter( expense => expense.carName === car );
+  const carExpenses = expenses.filter(expense => expense.carName === car);
 
   const totalSum = carExpenses.reduce((acc, expense) => acc + expense.cost, 0);
   const totalDistance = carExpenses.reduce((acc, expense) => acc + expense.distance, 0);
@@ -21,8 +22,8 @@ export const CarExpenses = ({ car }) => {
       <p>Total sum (euros): {totalSum}</p>
       <p>Total consumption (liters): {totalConsumption}</p>
       <p>Total distance (km): {totalDistance}</p>
-      <p>Avg. expenses per 100 km (euros): {avgExpensesPer100}</p>
-      <p>Avg. consumption per 100 km (liters): {avgConsumptionPer100}</p>
+      <p>Avg. expenses per 100 km (euros): {isNaN(avgExpensesPer100) ? 0 : avgExpensesPer100}</p>
+      <p>Avg. consumption per 100 km (liters): {isNaN(avgConsumptionPer100) ? 0 : avgConsumptionPer100}</p>
     </div>
   )
 }
