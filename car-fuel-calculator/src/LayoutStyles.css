@@ -32,8 +32,8 @@ p {
 
   width: 60%;
   height: 100%;
-
-  background-color: #e45a5a;
+  border-radius: 25px;
+  background-color: #a8dadc;
 }
 
 .right-div {
@@ -43,6 +43,7 @@ p {
   height: 100%;
   border-radius: 25px;
   background-color: #a8dadc;
+  border-radius: 25px;
 }
 
 .expenses-container {
@@ -69,6 +70,17 @@ p {
 .selection-div button {
   width: 20%;
   margin-left: 0.5em;
+  cursor: pointer;
+  background-color: #e63946;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 14px;
+  margin: 1px 0 px;
+  padding: 0px;
+  width: 50%;
+  border-radius: 25px;
 }
 
 /* Other divs */
@@ -117,18 +129,8 @@ p {
   margin: 10px 0 30px;
   padding: 10px;
   width: 50%;
+  border-radius: 25px;
   
 }
-.btn-small {
-  cursor: pointer;
-  background-color: #e63946;
-  box-shadow: var(--box-shadow);
-  color: #fff;
-  border: 0;
-  display: block;
-  font-size: 14px;
-  margin: 1px 0 px;
-  padding: 0px;
-  width: 50%;
-  border-radius: 25px;
-}
+
+
