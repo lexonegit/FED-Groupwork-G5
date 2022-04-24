@@ -1,5 +1,5 @@
 body {
-  background-color: #f7f7f7;
+  background-color: #f1faee;
 }
 
 p {
@@ -14,8 +14,8 @@ p {
 .history-div {
   padding: 0.5em;
   margin: 0.25em;
-
-  border: 1px dashed;
+  border-radius: 25px;
+  border: 2px solid;
 }
 
 .main-div {
@@ -42,18 +42,19 @@ p {
 
   width: 40%;
   height: 100%;
-
-  background-color: #e4ffd9;
+  border-radius: 25px;
+  background-color: #a8dadc;
 }
 
 .expenses-container {
   display: flex;
+  
 }
 
 /* Selection div things */
 .selection-div {
   display: flex;
-
+  
   height: 32px;
   margin: 0.25em;
   padding: 0.5em 0;
@@ -61,6 +62,9 @@ p {
 
 .selection-div select {
   width: 80%;
+  border-radius: 25px;
+  border: 2px solid;
+
 }
 
 .selection-div button {
@@ -72,13 +76,13 @@ p {
 .expenses-totals-div {
   width: 50%;
 
-  background-color: #eeeeee;
+  background-color: #ffffff;
 }
 
 .expenses-car-div {
   width: 50%;
 
-  background-color: #eeeeee;
+  background-color: #ffffff;
 }
 
 .content-div {
@@ -88,16 +92,43 @@ p {
 }
 
 .history-div {
-  background-color: #eeeeee;
+  background-color: #ffffff;
+  
 }
 
 .history-element-div {
   display: flex;
   justify-content: space-between;
-
   background-color: #ffffff;
   margin-bottom: 0.5em;
   padding: 0.5em;
-  border: 1px dashed black;
+  border: 1px solid black;
   height: 30px;
+  border-radius: 25px;
+}
+.btn {
+  cursor: pointer;
+  background-color: #e63946;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: 50%;
+  
+}
+.btn-small {
+  cursor: pointer;
+  background-color: #e63946;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 14px;
+  margin: 1px 0 px;
+  padding: 0px;
+  width: 50%;
+  border-radius: 25px;
 }
