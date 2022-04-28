@@ -17,13 +17,12 @@ export const CarExpenses = ({ car }) =>
 
   return (
     <div>
-      <h4>Car refueling expenses</h4>
-      <h4>{car}</h4>
-      <p>Total sum (euros): {totalSum}</p>
-      <p>Total consumption (liters): {totalConsumption}</p>
-      <p>Total distance (km): {totalDistance}</p>
-      <p>Avg. expenses per 100 km (euros): {isNaN(avgExpensesPer100) ? 0 : avgExpensesPer100}</p>
-      <p>Avg. consumption per 100 km (liters): {isNaN(avgConsumptionPer100) ? 0 : avgConsumptionPer100}</p>
+      <h4>Refueling expenses ({car})</h4>
+      <p>Total sum (euros): <b>{totalSum}</b></p>
+      <p>Total consumption (liters): <b>{totalConsumption}</b></p>
+      <p>Total distance (km): <b>{totalDistance}</b></p>
+      <p>Avg. expenses per 100 km (euros): <b>{isNaN(avgExpensesPer100) ? 0 : avgExpensesPer100}</b></p>
+      <p>Avg. consumption per 100 km (liters): <b>{isNaN(avgConsumptionPer100) ? 0 : avgConsumptionPer100}</b></p>
     </div>
   )
 }
