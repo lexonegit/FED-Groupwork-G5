@@ -16,9 +16,9 @@ body {
 .expenses-car-div,
 .content-div,
 .history-div {
-  padding: 0.5em;
+  padding: 1em;
   margin: 0.25em;
-  border-radius: 25px;
+  border-radius: 15px;
   border: 2px solid;
 }
 
@@ -27,7 +27,7 @@ body {
   justify-content: space-between;
 
   /* These 2 lines are responsible for responsive centering */
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -35,14 +35,16 @@ body {
   float: left;
   width: 60%;
   height: 100%;
-  border-radius: 25px;
+  border-radius: 15px;
+  /* background-color: #F1FAEE; */
 }
 
 .right-div {
   float: right;
   width: 40%;
   height: 100%;
-  border-radius: 25px;
+  border-radius: 15px;
+  /* background-color: #F1FAEE; */
 }
 
 .expenses-container {
@@ -61,7 +63,7 @@ body {
 
 .selection-div select {
   width: 80%;
-  border-radius: 25px;
+  border-radius: 15px;
   border: 2px solid;
 
 }
@@ -76,10 +78,8 @@ body {
   border: 0;
   display: block;
   font-size: 14px;
-  margin: 1px 0 px;
-  padding: 0px;
   width: 50%;
-  border-radius: 25px;
+  border-radius: 15px;
 }
 
 /* Other divs */
@@ -103,8 +103,9 @@ body {
 
 .history-div {
   background-color: #ffffff;
-  max-height: 510px;
+  max-height: 690px;
   overflow: auto;
+  text-align: center;
 }
 
 .history-element-div {
@@ -112,10 +113,10 @@ body {
   justify-content: space-between;
   background-color: #ffffff;
   margin-bottom: 0.5em;
-  padding: 0.5em;
+  padding: 0.75em;
   border: 1px solid black;
   height: 30px;
-  border-radius: 25px;
+  border-radius: 15px;
 }
 .btn {
   cursor: pointer;
@@ -125,10 +126,10 @@ body {
   border: 0;
   display: block;
   font-size: 16px;
-  margin: 10px 0 30px;
+  margin: 20px 0 30px;
   padding: 10px;
   width: 50%;
-  border-radius: 25px;
+  border-radius: 15px;
   
 }
 
