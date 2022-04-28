@@ -62,7 +62,6 @@ export const MainLayout = () =>
 
       <div className="right-div">
         <div className="history-div">
-          <p>Refueling history</p>
           <RefuelHistory />
         </div>
       </div>

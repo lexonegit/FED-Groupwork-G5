@@ -8,8 +8,10 @@ export const RefuelHistory = () =>
 
   return (
     <div>
+      <h5>Refueling history</h5>
       {expenses.map(expense => (
         <div key={expense.id} className="history-element-div">
+      
           <p>
             <b>{expense.carName}</b>
           </p>

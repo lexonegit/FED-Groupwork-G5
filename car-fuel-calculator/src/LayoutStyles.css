@@ -1,13 +1,17 @@
-body {
-  background-color: #f1faee;
-}
-
-p {
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*
+{
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Combined styles */
+body {
+  min-height: 100vh;
+  background: linear-gradient(#f1faee, #457B9D, #1D3557);
+}
+
+/* Combined styles background-color: #f1faee;*/
 .expenses-totals-div,
 .expenses-car-div,
 .content-div,
@@ -34,7 +38,7 @@ p {
   width: 60%;
   height: 100%;
   border-radius: 25px;
-  background-color: #a8dadc;
+  background-color: #F1FAEE;
 }
 
 .right-div {
@@ -43,7 +47,7 @@ p {
   width: 40%;
   height: 100%;
   border-radius: 25px;
-  background-color: #a8dadc;
+  background-color: #F1FAEE;
   border-radius: 25px;
 }
 
