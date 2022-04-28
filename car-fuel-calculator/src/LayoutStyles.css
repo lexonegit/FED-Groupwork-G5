@@ -8,10 +8,10 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(#f1faee, #457B9D, #1D3557);
+  background: linear-gradient(#1D3557, #6f9bb6);
 }
 
-/* Combined styles background-color: #f1faee;*/
+/* Combined styles background-color:*/
 .expenses-totals-div,
 .expenses-car-div,
 .content-div,
@@ -33,7 +33,6 @@ body {
 
 .left-div {
   float: left;
-
   width: 60%;
   height: 100%;
   border-radius: 15px;
@@ -42,7 +41,6 @@ body {
 
 .right-div {
   float: right;
-
   width: 40%;
   height: 100%;
   border-radius: 15px;
