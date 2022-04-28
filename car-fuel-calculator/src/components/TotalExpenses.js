@@ -2,7 +2,8 @@ import React, { useContext } from 'react';
 
 import { GlobalContext } from '../context/GlobalState';
 
-export const TotalExpenses = () => {
+export const TotalExpenses = () =>
+{
   const { expenses } = useContext(GlobalContext);
 
   const totalSum = expenses.reduce((acc, expense) => acc + expense.cost, 0);
@@ -18,8 +19,8 @@ export const TotalExpenses = () => {
       <p>Total sum (euros): {totalSum}</p>
       <p>Total consumption (liters): {totalConsumption}</p>
       <p>Total distance (km): {totalDistance} </p>
-      <p>Avg. expenses per 100 km (euros): {avgExpensesPer100}</p>
-      <p>Avg. consumption per 100 km (liters): {avgConsumptionPer100}</p>
+      <p>Avg. expenses per 100 km (euros): {isNaN(avgExpensesPer100) ? 0 : avgExpensesPer100}</p>
+      <p>Avg. consumption per 100 km (liters): {isNaN(avgConsumptionPer100) ? 0 : avgConsumptionPer100}</p>
     </div>
   )
 }

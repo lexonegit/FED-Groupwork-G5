@@ -11,6 +11,3 @@
 8. Stop the app by pressing `CTRL+C`
 9. Create your own Git branch `git checkout -b [YOUR_BRANCH_NAME]`
 10. Push your branch to GitHub `git push origin [YOUR_BRANCH_NAME]`
-
-## Todo
-https://docs.google.com/document/d/1F9hCNHfhcflCmFybzQwghocaX7MQao0ixea3JGNSTPA/edit?usp=sharing
